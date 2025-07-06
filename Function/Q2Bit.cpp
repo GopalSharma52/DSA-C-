@@ -4,8 +4,8 @@ int numberofBit(int num1 , int num2){
       int sum =0;
       int i;
       while(num1!=0){
-            int bita = num1&1;
-            num1 = num1 >> 1;
+            int bita = num1&1;         //     ->Agar bit 1 hogi to 1 aa jayega.
+            num1 = num1 >> 1;         //      -> ye right kar diya.
             i++;
             if(bita == 1){
                   sum = sum + bita;
