@@ -1,13 +1,29 @@
 #include<iostream>
+#include<vector>
 using namespace std;
-int main(){
-      int arr[10]={1,0,1,1,1,1,0,0,1,0};
-      int n = sizeof(arr)/sizeof(arr[0]);
-      int i = arr[0];
-      int j = arr[n];
-     while(i<j){
-      if(i=0){
-            cout<< arr[0] = 0;
-      }
-     }
+
+void sortZeroOne(vector<int>& arr) {
+    int left = 0;
+    int right = arr.size() - 1;
+
+    while(left < right) {
+        if(arr[left] == 1 && arr[right] == 0) {
+            swap(arr[left], arr[right]);
+            left++;
+            right--;
+        }
+        if(arr[left] == 0) left++;
+        if(arr[right] == 1) right--;
+    }
+}
+int main() {
+    vector<int> arr = {0, 1, 0, 1, 1, 0,1,0,0,0,0,0,0,1};
+
+    sortZeroOne(arr);
+
+    cout << "Sorted Array: ";
+    for(int num : arr) {
+        cout << num << " ";
+    }
+    return 0;
 }
