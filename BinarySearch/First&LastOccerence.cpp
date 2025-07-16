@@ -6,7 +6,7 @@ int firstOcc(int arr[],int size,int key){
       int ans=-1;
       int mid = start + (end-start)/2;
       while(start<=end){
-            if(arr[mid]==key){
+            if(arr[mid]==key){ 
                   ans = mid;
                   end = mid - 1;
             }
