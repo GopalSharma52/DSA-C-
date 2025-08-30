@@ -6,10 +6,10 @@ void Swap(int *a, int *b){
       *b = temp;
 }
 int SelectionSort(int arr[], int n){
-      for(int i = 0; i < n; i++){
-            for(int j = 1; j<n; j++){
-                  if(arr[i]>arr[j+i]){
-                        Swap(&arr[j],&arr[j+i]);
+      for(int i = 0; i < n-1 ; i++){
+            for(int j = i+1; j<n; j++){
+                  if(arr[i]>arr[j]){
+                        Swap(&arr[j],&arr[i]);
                   }
             }
       }
